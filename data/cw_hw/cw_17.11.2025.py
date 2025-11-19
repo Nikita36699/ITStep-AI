@@ -103,37 +103,37 @@
 #
 # cv2.waitKey(0)
 
-
-import cv2
-
-
-img = cv2.imread('data/lesson2/bio_low_contrast.jpg', cv2.IMREAD_GRAYSCALE)
-img = cv2.resize(img, (500, 500))
-
-# img -- bgr
-cv2.imshow('origin', img)
-
-
-# наведення різкості(конраст)
-# вирівнювання гістрограм(працює лише для чорнобілих)
-result = cv2.equalizeHist(img)
-
-cv2.imshow('result', result)
-
-img = cv2.imread('data/lesson2/cell.png')
-hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-
-# вирівнюємо яскравість
-value = hsv[:, :, 2]
-new_value = cv2.equalizeHist(value)
-hsv[:, :, 2] = new_value
-
-# перевести назад в bgr
-new_img = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
-
-cv2.imshow('contrast', new_img)
-cv2.imshow('origin', img)
-cv2.waitKey(0)
+#
+# import cv2
+#
+#
+# img = cv2.imread('data/lesson2/bio_low_contrast.jpg', cv2.IMREAD_GRAYSCALE)
+# img = cv2.resize(img, (500, 500))
+#
+# # img -- bgr
+# cv2.imshow('origin', img)
+#
+#
+# # наведення різкості(конраст)
+# # вирівнювання гістрограм(працює лише для чорнобілих)
+# result = cv2.equalizeHist(img)
+#
+# cv2.imshow('result', result)
+#
+# img = cv2.imread('data/lesson2/cell.png')
+# hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+#
+# # вирівнюємо яскравість
+# value = hsv[:, :, 2]
+# new_value = cv2.equalizeHist(value)
+# hsv[:, :, 2] = new_value
+#
+# # перевести назад в bgr
+# new_img = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+#
+# cv2.imshow('contrast', new_img)
+# cv2.imshow('origin', img)
+# cv2.waitKey(0)
 
 
 # Завдання 1
