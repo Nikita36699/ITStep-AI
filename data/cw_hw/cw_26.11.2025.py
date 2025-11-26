@@ -1,13 +1,13 @@
-# детекція об'єктів(YOLO)
-
-import ultralytics
-import cv2
+# # детекція об'єктів(YOLO)
+#
+# import ultralytics
+# import cv2
 #
 # # створення моделі
 # model = ultralytics.YOLO('yolov8s.pt')
 #
 # # отримати зображення з ввідео
-# cap = cv2.VideoCapture('data/lesson8/cars+bikes.mp4')
+# cap = cv2.VideoCapture('C:\ITSTEP\ITStep-AI\data\lesson8\cars+bikes.mp4')
 # success, img = cap.read()
 #
 # img = cv2.resize(img, None, fx=0.5, fy=0.5)
@@ -25,8 +25,9 @@ import cv2
 #                      # cpu -- звичайний процес
 #                      # cuda -- графічний процесор
 #     conf=0.25,       # мінімальній відсоток для об'єкта щоб попасти в result
-#     iou=0.7      # максимально можливий рівень перетину рамок(якщо більше то вважаємо
-#                  # що це рамки для одного й того самого об'єкта)
+#     iou=0.7,        # максимально можливий рівень перетину рамок(якщо більше то вважаємо
+#                     # що це рамки для одного й того самого об'єкта)
+#     classes=[0, 1]  # id класів які детектити
 # )
 #
 #
@@ -73,24 +74,24 @@ import cv2
 # cv2.imshow('object', roi)
 #
 #
-# # # відео
-# # while True:
-# #     success, img = cap.read()
-# #
-# #     if not success:
-# #         break
-# #
-# #     img = cv2.resize(img, None, fx=0.5, fy=0.5)
-# #
-# #     results = model.predict(img)
-# #     result = results[0]
-# #
-# #     res_img = result.plot()
-# #
-# #     cv2.imshow('result', res_img)
-# #
-# #     if cv2.waitKey(1) & 0xFF == ord('q'):
-# #         break
+# # відео
+# while True:
+#     success, img = cap.read()
+#
+#     if not success:
+#         break
+#
+#     img = cv2.resize(img, None, fx=0.5, fy=0.5)
+#
+#     results = model.predict(img)
+#     result = results[0]
+#
+#     res_img = result.plot()
+#
+#     cv2.imshow('result', res_img)
+#
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
 #
 #
 # cv2.waitKey(0)
@@ -102,7 +103,7 @@ import cv2
 # Отримайте рамки для кожного об’єкта, виріжіть їх та виведіть як окремі зображення
 import ultralytics
 import cv2
-from sympy import false
+
 
 # створення моделі
 model = ultralytics.YOLO('yolov8s.pt')
