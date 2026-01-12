@@ -4,3 +4,4 @@
 __pycache__/*
 practice/*
 ids.json
+.streamlit/*
