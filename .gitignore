@@ -8,3 +8,4 @@ ids.json
 /data/cw_hw/yolo11s-pose.pt
 /data/cw_hw/yolo11s-seg.pt
 /data/cw_hw/yolov8s.pt
+/data_base_test.py
