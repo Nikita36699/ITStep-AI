@@ -10,3 +10,4 @@ ids.json
 /data/cw_hw/yolov8s.pt
 /data_base_test.py
 /reglament_arendy_avto.pdf
+/pinecone_split pdf.py
