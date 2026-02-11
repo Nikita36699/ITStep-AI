@@ -74,7 +74,7 @@ def rules_search(query: str, k: int = 4) -> str:
 # LLM + SQL Toolkit
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
+    model="gemini-2.5-flash-lite",
     google_api_key=GEMINI_API_KEY,
     temperature=0.2,
 )
@@ -223,7 +223,7 @@ if user_text:
         with st.spinner("Думаю..."):
             result = agent.invoke(
                 {"messages": agent_messages},
-                config={"recursion_limit": 6},
+                config={"recursion_limit": 4},
             )
 
             msgs = result["messages"]
