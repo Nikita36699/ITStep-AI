@@ -74,7 +74,7 @@ def rules_search(query: str, k: int = 4) -> str:
 # LLM + SQL Toolkit
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-3.0-flash",
+    model="gemini-2.5-flash",
     google_api_key=GEMINI_API_KEY,
     temperature=0.2,
 )
