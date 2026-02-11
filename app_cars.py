@@ -129,7 +129,7 @@ SYSTEM = SystemMessage(content="""
 
 #### TOOL BUDGET (HARD LIMIT)
 - На 1 ответ: максимум 1 SQL SELECT с LIMIT.
-- На 1 ответ: максимум 1 rules_search.
+- На 1 ответ: максимум 2 rules_search.
 - Если вопрос про правила/штрафы/залог/возврат/страховку — rules_search ОБЯЗАТЕЛЕН.
 - Никаких UPDATE/DELETE/CREATE.
 
@@ -223,7 +223,7 @@ if user_text:
         with st.spinner("Думаю..."):
             result = agent.invoke(
                 {"messages": agent_messages},
-                config={"recursion_limit": 4},
+                config={"recursion_limit": 6},
             )
 
             msgs = result["messages"]
