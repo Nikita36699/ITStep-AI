@@ -223,7 +223,7 @@ if user_text:
         with st.spinner("Думаю..."):
             result = agent.invoke(
                 {"messages": agent_messages},
-                config={"recursion_limit": 8},
+                config={"recursion_limit": 6},
             )
 
             msgs = result["messages"]
